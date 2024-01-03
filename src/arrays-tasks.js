@@ -600,8 +600,91 @@ function shiftArray(arr, n) {
  *   sortDigitNamesByNumericOrder([ 'nine','eight','nine','eight' ]) => [ 'eight','eight','nine','nine']
  *   sortDigitNamesByNumericOrder([ 'one','one','one','zero' ]) => [ 'zero','one','one','one' ]
  */
-function sortDigitNamesByNumericOrder(/* arr */) {
-  throw new Error('Not implemented');
+function sortDigitNamesByNumericOrder(arr) {
+  const sortArr = [];
+  const final = [];
+
+  arr.map((el) => {
+    switch (el) {
+      case 'zero':
+        sortArr.push(0);
+        break;
+      case 'one':
+        sortArr.push(1);
+        break;
+      case 'two':
+        sortArr.push(2);
+        break;
+      case 'three':
+        sortArr.push(3);
+        break;
+      case 'four':
+        sortArr.push(4);
+        break;
+      case 'five':
+        sortArr.push(5);
+        break;
+      case 'six':
+        sortArr.push(6);
+        break;
+      case 'seven':
+        sortArr.push(7);
+        break;
+      case 'eight':
+        sortArr.push(8);
+        break;
+      case 'nine':
+        sortArr.push(9);
+        break;
+      default:
+        break;
+    }
+
+    return sortArr;
+  });
+
+  sortArr
+    .sort((a, b) => a - b)
+    .map((el) => {
+      switch (el) {
+        case 0:
+          final.push('zero');
+          break;
+        case 1:
+          final.push('one');
+          break;
+        case 2:
+          final.push('two');
+          break;
+        case 3:
+          final.push('three');
+          break;
+        case 4:
+          final.push('four');
+          break;
+        case 5:
+          final.push('five');
+          break;
+        case 6:
+          final.push('six');
+          break;
+        case 7:
+          final.push('seven');
+          break;
+        case 8:
+          final.push('eight');
+          break;
+        case 9:
+          final.push('nine');
+          break;
+        default:
+          break;
+      }
+
+      return final;
+    });
+
+  return final;
 }
 
 /**
